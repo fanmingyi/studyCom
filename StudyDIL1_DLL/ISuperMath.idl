@@ -1,0 +1,24 @@
+import "unknwn.idl";
+
+[
+	object,
+	uuid(963E0E6C-5CB2-8C16-93B8-1A4AFB30CEF7)
+]
+interface ISuperMath :IUnknown {
+	[helpstring("º”∑®‘ÀÀ„")]HRESULT Add([in]long n1,[in]long n2,[out,retval]long *result);
+};
+
+
+
+[
+	uuid(963E0E6C-5CB2-8C16-93B8-1A4AFB30CEF8),
+	version(1.0)
+]
+library MySuperMathLib {
+	[
+		uuid(963E0E6C-5CB2-8C16-93B8-1A4AFB30CEF9)
+	]
+	coclass CSuperMath {
+		interface ISuperMath;
+	};
+}
